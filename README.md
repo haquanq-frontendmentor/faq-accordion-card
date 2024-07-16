@@ -14,7 +14,7 @@ Users should be able to:
 
 ### Solution
 
-- Built with: `HTML` `CSS`
+- Built with: `HTML` `CSS` `JS`
 - Mobile-first workflow
 - Accessible accordion component for screen readers
 
