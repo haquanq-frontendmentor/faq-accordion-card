@@ -1,13 +1,13 @@
-const app = {
-  faqButtons: document.querySelectorAll(".faq__title__btn"),
-  faqContents: document.querySelectorAll(".faq__content"),
+const accordion = {
+  btnElements: document.querySelectorAll(".faq__btn"),
+  contentElements: document.querySelectorAll(".faq__content"),
   init() {
     const transitionDuration = 300;
 
-    this.faqButtons.forEach((faqBtn, index) => {
+    this.btnElements.forEach((faqBtn, index) => {
       let requestingFrameId = null;
 
-      const faqContentElement = this.faqContents[index];
+      const faqContentElement = this.contentElements[index];
       if (faqBtn.getAttribute("aria-expanded") == "true") {
         faqContentElement.style.height = `auto`;
       }
@@ -29,9 +29,9 @@ const app = {
           const cleanUpRequest = (t) => {
             if (!startCleanUpTime) startCleanUpTime = t;
             if (t - startCleanUpTime >= transitionDuration) {
-              faqContentElement.style.display = "";
               faqContentElement.style.height = "";
               faqContentElement.style.transition = "";
+              faqContentElement.setAttribute("hidden", "");
               requestingFrameId = null;
               return;
             }
@@ -43,7 +43,7 @@ const app = {
 
       const showContent = () => {
         faqBtn.setAttribute("aria-expanded", "true");
-        faqContentElement.style.display = "block";
+        faqContentElement.removeAttribute("hidden");
         const currentHeight = faqContentElement.clientHeight;
         faqContentElement.style.height = "auto";
         const targetHeight = faqContentElement.clientHeight;
@@ -75,10 +75,6 @@ const app = {
         });
       };
 
-      if (faqBtn.getAttribute("aria-expanded") === "true") {
-        faqContentElement.style.display = "block";
-      }
-
       faqBtn.addEventListener("click", (e) => {
         const expanded = faqBtn.getAttribute("aria-expanded") === "true";
         if (expanded) hideContent();
@@ -88,4 +84,4 @@ const app = {
   },
 };
 
-app.init();
+accordion.init();

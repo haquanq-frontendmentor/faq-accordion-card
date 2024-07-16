@@ -67,6 +67,10 @@ h6 {
     overflow-wrap: break-word;
 }
 
+[hidden] {
+    display: none;
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -129,7 +133,7 @@ h6 {
     padding: 1.125rem 0 1rem 0;
     border-bottom: 1px solid var(--clr-gray-100);
 }
-.faq__title__btn {
+.faq__btn {
     width: 100%;
     text-align: start;
     display: flex;
@@ -145,26 +149,20 @@ h6 {
     transition-timing-function: ease;
     color: var(--clr-gray-500);
 }
-.faq__title__btn span {
+.faq__btn span {
     padding-right: 1rem;
 }
-.faq__title__btn:focus-visible {
-    outline: 2px dashed var(--clr-red-500);
-    outline-offset: 4px;
-}
-
-.faq__title__btn img {
+.faq__btn img {
     transition: transform 250ms ease;
 }
-.faq__title__btn[aria-expanded="true"] {
+.faq__btn[aria-expanded="true"] {
     font-weight: var(--font-bold);
     color: var(--clr-gray-900);
 }
-.faq__title__btn[aria-expanded="true"] img {
+.faq__btn[aria-expanded="true"] img {
     transform: rotate(180deg) translateY(1px);
 }
 .faq__content {
-    display: none;
     overflow: hidden;
     font-size: var(--text-sm);
     font-size: 0.75rem;
@@ -209,8 +207,15 @@ h6 {
     }
 }
 
+@supports selector(:focus-visible) {
+    button:focus-visible {
+        outline: 2px dashed var(--clr-red-500);
+        outline-offset: 4px;
+    }
+}
+
 @media (hover: hover) {
-    .faq__title__btn:hover {
+    .faq__btn:hover {
         color: var(--clr-red-500);
     }
 }
@@ -278,7 +283,7 @@ h6 {
         padding-left: 0.0625rem;
         padding-right: 1rem;
     }
-    .faq__title__btn {
+    .faq__btn {
         font-size: 0.875rem;
         line-height: 1.125rem;
     }
@@ -290,6 +295,7 @@ h6 {
     }
     .card {
         margin: 0 0 0 2.625rem;
+        height: fit-content;
     }
     .card__image__box {
         display: block;
