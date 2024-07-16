@@ -185,29 +185,6 @@ h6 {
     line-height: 1.125rem;
 }
 
-@keyframes woman-float {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-12px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
-@keyframes box-float {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-8px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
-
 @media (hover: hover) {
     .faq__title__btn:hover {
         color: var(--clr-red-500);
@@ -249,8 +226,8 @@ h6 {
         overflow: hidden;
     }
     .card__image__pattern {
-        pointer-events: none;
         position: absolute;
+        pointer-events: none;
         top: -18.4375rem;
         right: -0.0625rem;
         left: -36.125rem;
@@ -283,11 +260,18 @@ h6 {
     }
 }
 @media screen and (min-width: 64em) {
+    .main__container {
+        display: flex;
+        justify-content: center;
+    }
+    .card {
+        margin: 0 0 0 2.625rem;
+    }
     .card__image__box {
         display: block;
         position: absolute;
-        top: 12.8125rem;
-        left: -8.125rem;
+        top: 12.75rem;
+        left: -5.8125rem;
     }
     .card__content {
         padding: 4.1875rem 5.875rem 5.1875rem 5.4375rem;
