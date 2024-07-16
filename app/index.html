@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./main.css" />
+
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+  </head>
+  <body>
+    <main class="main__container">
+      <section class="card">
+        <div class="card__image">
+          <div class="card__image__overflow">
+            <picture class="card__image__pattern">
+              <source srcset="./assets/images/bg-pattern-desktop.svg" media="(min-width: 48em)" />
+              <img src="./assets/images/bg-pattern-mobile.svg" alt="" />
+            </picture>
+            <picture class="card__image__woman">
+              <source
+                srcset="./assets/images/illustration-woman-online-desktop.svg"
+                media="(min-width: 48em)"
+              />
+              <img src="./assets/images/illustration-woman-online-mobile.svg" alt="" />
+            </picture>
+          </div>
+          <img class="card__image__box" src="./assets/images/illustration-box-desktop.svg" alt="" />
+        </div>
+        <div class="card__content">
+          <h1 class="card__headline">FAQ</h1>
+          <figure class="faq__wrapper">
+            <figcaption class="sr-only">
+              There are 5 frequently asked questions below, use button to show or hide answer
+            </figcaption>
+            <ul class="faq__list">
+              <li class="faq__item">
+                <h2 class="faq__title" id="faq-1-label">
+                  <button class="faq__title__btn" aria-controls="faq-1" aria-expanded="false">
+                    <span> How many team members can I invite? </span>
+                    <img src="./assets/icons/icon-arrow-down.svg" alt="" />
+                  </button>
+                </h2>
+                <div class="faq__content" id="faq-1" aria-labelledby="faq-1-label">
+                  <p class="faq__content__text">
+                    You can invite up to 2 additional users on the Free plan. There is no limit on
+                    team members for the Premium plan.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item">
+                <h2 class="faq__title" id="faq-2-label">
+                  <button class="faq__title__btn" aria-controls="faq-2" aria-expanded="true">
+                    <span> What is the maximum file upload size? </span>
+                    <img src="./assets/icons/icon-arrow-down.svg" alt="" />
+                  </button>
+                </h2>
+                <div class="faq__content" id="faq-2" aria-labelledby="faq-2-label">
+                  <p class="faq__content__text">
+                    No more than 2GB. All files in your account must fit your allotted storage
+                    space.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item">
+                <h2 class="faq__title" id="faq-3-label">
+                  <button class="faq__title__btn" aria-controls="faq-3" aria-expanded="false">
+                    <span> How do I reset my password? </span>
+
+                    <img src="./assets/icons/icon-arrow-down.svg" alt="" />
+                  </button>
+                </h2>
+                <div class="faq__content" id="faq-3" aria-labelledby="faq-3-label">
+                  <p class="faq__content__text">
+                    Click “Forgot password” from the login page or “Change password” from your
+                    profile page. A reset link will be emailed to you.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item">
+                <h2 class="faq__title" id="faq-4-label">
+                  <button class="faq__title__btn" aria-controls="faq-4" aria-expanded="false">
+                    <span> Can I cancel my subscription? </span>
+                    <img src="./assets/icons/icon-arrow-down.svg" alt="" />
+                  </button>
+                </h2>
+                <div class="faq__content" id="faq-4" aria-labelledby="faq-4-label">
+                  <p class="faq__content__text">
+                    Yes! Send us a message and we’ll process your request no questions asked.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item">
+                <h2 class="faq__title" id="faq-5-label">
+                  <button class="faq__title__btn" aria-controls="faq-5" aria-expanded="false">
+                    <span> Do you provide additional support? </span>
+                    <img src="./assets/icons/icon-arrow-down.svg" alt="" />
+                  </button>
+                </h2>
+                <div class="faq__content" id="faq-5" aria-labelledby="faq-5-label">
+                  <p class="faq__content__text">
+                    Chat and email support is available 24/7. Phone lines are open during normal
+                    business hours.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
