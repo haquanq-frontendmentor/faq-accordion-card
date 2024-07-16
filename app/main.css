@@ -185,6 +185,30 @@ h6 {
     line-height: 1.125rem;
 }
 
+@keyframes woman-float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes box-float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 @media (hover: hover) {
     .faq__title__btn:hover {
         color: var(--clr-red-500);
