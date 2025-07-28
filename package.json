@@ -1,6 +1,6 @@
 {
-  "name": "fm-social-links-profile",
-  "description": "Solution for frontendmentor.io challenge: social-links-profile",
+  "name": "faq-accordion-card",
+  "description": "Solution for frontendmentor.io challenge: faq-accordion-card",
   "devDependencies": {
     "browser-sync": "^3.0.2"
   },
