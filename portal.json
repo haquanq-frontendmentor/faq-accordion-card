@@ -1,0 +1,15 @@
+{
+  "name": "FAQ Accordion Card",
+  "featured": false,
+  "colors": {
+    "brand": "#6F64E7"
+  },
+  "images": {
+    "preview": "https://raw.githubusercontent.com/haquanq-frontendmentor/faq-accordion-card/main/docs/preview.jpg"
+  },
+  "frontendmentor": {
+    "difficulty": "newbie",
+    "challengeUrl": "",
+    "solutionUrl": ""
+  }
+}
